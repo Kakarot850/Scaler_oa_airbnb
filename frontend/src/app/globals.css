@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #222222;
+  --rausch: #ff385c;
+  --rausch-dark: #e00b41;
+  --babu: #008489;
+  --border-light: #ebebeb;
+  --border-gray: #dddddd;
+  --text-muted: #717171;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for horizontal category bar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Airbnb smooth button active scale */
+.btn-press {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.btn-press:active {
+  transform: scale(0.96);
+}
+
+/* Image zoom effect on hover */
+.card-hover-zoom {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-container:hover .card-hover-zoom {
+  transform: scale(1.05);
+}
